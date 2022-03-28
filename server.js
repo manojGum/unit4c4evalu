@@ -1,0 +1,10 @@
+const app=require("./index");
+const connect=require("./src/configs/db");
+app.listen(5000,async function(){
+    try{
+        await connect();
+        console.log("listening on paet 5000");
+    }catch(err){
+        console.error(err.messages);
+    }
+});
